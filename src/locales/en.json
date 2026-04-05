@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "about": "Our Story",
+    "events": "Events",
+    "dressCode": "Dress Code",
+    "gallery": "Gallery",
+    "rsvp": "RSVP"
+  },
+  "hero": {
+    "subtitle": "are getting married",
+    "countdownLabel": "Until the big day",
+    "rsvpButton": "RSVP Now",
+    "scrollHint": "Scroll to explore"
+  },
+  "about": {
+    "sectionLabel": "Our Story",
+    "heading": "How It All Began",
+    "brideLabel": "The Bride",
+    "groomLabel": "The Groom"
+  },
+  "events": {
+    "sectionLabel": "Event Details",
+    "heading": "Join Us to Celebrate",
+    "ceremony": "Ceremony",
+    "reception": "Reception",
+    "getDirections": "Get Directions"
+  },
+  "dressCode": {
+    "sectionLabel": "Dress Code",
+    "heading": "Come Dressed to Celebrate",
+    "colorPalette": "Suggested Color Palette",
+    "pleaseNote": "Please Note"
+  },
+  "gallery": {
+    "sectionLabel": "Gallery",
+    "heading": "Our Memories",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "rsvp": {
+    "sectionLabel": "RSVP",
+    "heading": "Will You Join Us?",
+    "deadline": "Kindly reply by",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Your full name",
+      "attending": "Will you attend?",
+      "attendingYes": "Yes, I'll be there!",
+      "attendingNo": "Regretfully decline",
+      "guestCount": "Number of Guests",
+      "message": "Message to the Couple",
+      "messagePlaceholder": "Share your wishes or any dietary requirements…",
+      "submit": "Send RSVP",
+      "submitting": "Sending…"
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "We've received your RSVP and can't wait to celebrate with you."
+    },
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "tagline": "Forever begins here.",
+    "copyright": "Made with love."
+  },
+  "countdown": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  }
+}

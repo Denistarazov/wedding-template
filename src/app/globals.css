@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties (Theme Variables) ─────────────────────────────── */
+:root {
+  --color-primary: #C9A87C;
+  --color-accent:  #8B6952;
+  --color-bg:      #FDF8F0;
+  --color-text:    #2D2014;
+}
+
+.dark {
+  --color-bg:   #1A1410;
+  --color-text: #F5EDE0;
+}
+
+/* ── Global Base Styles ───────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-base;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Headings use the serif font (Playfair Display) */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  /* Smooth focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gold-DEFAULT ring-offset-2;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-DEFAULT rounded-full;
+  }
+}
+
+/* ── Utility Layer Additions ─────────────────────────────────────────────── */
+@layer utilities {
+  /* Text gradient for hero names */
+  .text-gradient {
+    background: linear-gradient(135deg, #C9A87C 0%, #8B6952 50%, #C9A87C 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Glassmorphism card */
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Decorative divider */
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  .ornament::before,
+  .ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, currentColor);
+  }
+
+  .ornament::after {
+    background: linear-gradient(to left, transparent, currentColor);
+  }
+}
+
+/* ── Section Spacing ─────────────────────────────────────────────────────── */
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* Section label (e.g., "Our Story") */
+  .section-label {
+    @apply text-sm tracking-[0.25em] uppercase font-sans font-medium;
+    color: var(--color-primary);
+  }
+
+  /* Primary heading */
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight;
+    color: var(--color-text);
+  }
+
+  /* Divider line with diamond */
+  .divider {
+    @apply flex items-center gap-3 my-4;
+    color: var(--color-primary);
+  }
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.4;
+  }
+}
