@@ -200,7 +200,7 @@ export default function Gallery() {
           >
             <p className="section-label mb-3">{en.gallery.sectionLabel}</p>
             <h2 className="section-heading">{en.gallery.heading}</h2>
-            <div className="w-16 h-px bg-gold-DEFAULT mx-auto mt-4" />
+            <div className="w-16 h-px bg-gold mx-auto mt-4" />
           </motion.div>
 
           {/* ── Masonry Grid ── */}

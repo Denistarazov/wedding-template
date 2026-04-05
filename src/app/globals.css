@@ -37,7 +37,7 @@
 
   /* Smooth focus rings */
   *:focus-visible {
-    @apply outline-none ring-2 ring-gold-DEFAULT ring-offset-2;
+    @apply outline-none ring-2 ring-gold ring-offset-2;
   }
 
   /* Custom scrollbar */
@@ -48,7 +48,7 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-gold-DEFAULT rounded-full;
+    @apply bg-gold rounded-full;
   }
 }
 

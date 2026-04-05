@@ -145,7 +145,7 @@ export default function EventDetails() {
           <p className="text-[var(--color-text)]/60 font-sans mt-3">
             {formatDate(event.date, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
-          <div className="w-16 h-px bg-gold-DEFAULT mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </div>
 
         {/* ── Venue Cards ── */}

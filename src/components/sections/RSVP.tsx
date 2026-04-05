@@ -149,7 +149,7 @@ export default function RSVP() {
               {formatDate(rsvp.deadline)}
             </span>
           </p>
-          <div className="w-16 h-px bg-gold-DEFAULT mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </div>
 
         {/* ── Form Card ── */}

@@ -34,7 +34,7 @@ function PersonCard({
       {/* Photo */}
       <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden mb-6
                       ring-4 ring-champagne-200 dark:ring-champagne-700
-                      group-hover:ring-gold-DEFAULT transition-all duration-500 shadow-xl">
+                      group-hover:ring-gold transition-all duration-500 shadow-xl">
         <Image
           src={photo}
           alt={fullName}
@@ -88,7 +88,7 @@ function TimelineEntry({
       <div className={`flex-1 md:max-w-[43%] ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
         <div className="bg-champagne-50 dark:bg-champagne-900/20 rounded-2xl p-5 md:p-6
                         border border-champagne-200 dark:border-champagne-700/30
-                        hover:border-gold-DEFAULT/50 transition-colors duration-300 shadow-sm">
+                        hover:border-gold/50 transition-colors duration-300 shadow-sm">
           <span className="section-label block mb-1">{year}</span>
           <h4 className="font-serif text-xl font-bold text-[var(--color-text)] mb-2">{title}</h4>
           <p className="text-[var(--color-text)]/70 font-sans text-sm leading-relaxed">{description}</p>
@@ -98,7 +98,7 @@ function TimelineEntry({
       {/* Center dot (desktop) */}
       <div className="hidden md:flex flex-col items-center flex-shrink-0 w-10">
         <div
-          className="w-4 h-4 rounded-full border-2 border-gold-DEFAULT bg-cream dark:bg-[#1A1410] z-10"
+          className="w-4 h-4 rounded-full border-2 border-gold bg-cream dark:bg-[#1A1410] z-10"
           style={{ boxShadow: '0 0 0 4px var(--color-primary)20' }}
         />
       </div>
@@ -127,7 +127,7 @@ export default function AboutUs() {
         <div className="text-center mb-16">
           <p className="section-label mb-3">{en.about.sectionLabel}</p>
           <h2 className="section-heading">{en.about.heading}</h2>
-          <div className="w-16 h-px bg-gold-DEFAULT mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </div>
 
         {/* ── Couple Photos ── */}
@@ -148,7 +148,7 @@ export default function AboutUs() {
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical center line (desktop) */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 bottom-2
-                           w-px bg-gradient-to-b from-transparent via-gold-DEFAULT/40 to-transparent" />
+                           w-px bg-gradient-to-b from-transparent via-gold/40 to-transparent" />
 
           <div className="flex flex-col gap-8 md:gap-10">
             {couple.story.map((entry, i) => (

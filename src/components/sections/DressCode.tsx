@@ -100,7 +100,7 @@ export default function DressCode() {
         <div className="text-center mb-12">
           <p className="section-label mb-3">{en.dressCode.sectionLabel}</p>
           <h2 className="section-heading">{en.dressCode.heading}</h2>
-          <div className="w-16 h-px bg-gold-DEFAULT mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

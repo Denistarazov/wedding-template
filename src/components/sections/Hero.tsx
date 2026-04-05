@@ -109,7 +109,7 @@ export default function Hero() {
           style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
         >
           {couple.bride.name}
-          <span className="block sm:inline text-gold-DEFAULT"> &amp; </span>
+          <span className="block sm:inline text-gold"> &amp; </span>
           {couple.groom.name}
         </motion.h1>
 
