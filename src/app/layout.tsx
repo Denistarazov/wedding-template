@@ -48,7 +48,7 @@ export default function RootLayout({
       suppressHydrationWarning // Required by next-themes to avoid class mismatch
       className={`${playfair.variable} ${inter.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
