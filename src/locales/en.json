@@ -1,73 +1,73 @@
 {
   "nav": {
-    "about": "Our Story",
-    "events": "Events",
-    "dressCode": "Dress Code",
-    "gallery": "Gallery",
-    "rsvp": "RSVP"
+    "about": "Наша история",
+    "events": "Мероприятие",
+    "dressCode": "Дресс-код",
+    "gallery": "Галерея",
+    "rsvp": "Участие"
   },
   "hero": {
-    "subtitle": "are getting married",
-    "countdownLabel": "Until the big day",
-    "rsvpButton": "RSVP Now",
-    "scrollHint": "Scroll to explore"
+    "subtitle": "приглашают на свадьбу",
+    "countdownLabel": "До главного дня",
+    "rsvpButton": "Подтвердить участие",
+    "scrollHint": "Листайте вниз"
   },
   "about": {
-    "sectionLabel": "Our Story",
-    "heading": "How It All Began",
-    "brideLabel": "The Bride",
-    "groomLabel": "The Groom"
+    "sectionLabel": "Наша история",
+    "heading": "Как всё началось",
+    "brideLabel": "Невеста",
+    "groomLabel": "Жених"
   },
   "events": {
-    "sectionLabel": "Event Details",
-    "heading": "Join Us to Celebrate",
-    "ceremony": "Ceremony",
-    "reception": "Reception",
-    "getDirections": "Get Directions"
+    "sectionLabel": "Детали мероприятия",
+    "heading": "Присоединяйтесь к нам",
+    "ceremony": "Церемония",
+    "reception": "Банкет",
+    "getDirections": "Построить маршрут"
   },
   "dressCode": {
-    "sectionLabel": "Dress Code",
-    "heading": "Come Dressed to Celebrate",
-    "colorPalette": "Suggested Color Palette",
-    "pleaseNote": "Please Note"
+    "sectionLabel": "Дресс-код",
+    "heading": "Оденьтесь для праздника",
+    "colorPalette": "Рекомендуемая цветовая палитра",
+    "pleaseNote": "Обратите внимание"
   },
   "gallery": {
-    "sectionLabel": "Gallery",
-    "heading": "Our Memories",
-    "close": "Close",
-    "prev": "Previous",
-    "next": "Next"
+    "sectionLabel": "Галерея",
+    "heading": "Наши воспоминания",
+    "close": "Закрыть",
+    "prev": "Назад",
+    "next": "Вперёд"
   },
   "rsvp": {
-    "sectionLabel": "RSVP",
-    "heading": "Will You Join Us?",
-    "deadline": "Kindly reply by",
+    "sectionLabel": "Подтверждение",
+    "heading": "Вы придёте?",
+    "deadline": "Ответьте, пожалуйста, до",
     "form": {
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "Your full name",
-      "attending": "Will you attend?",
-      "attendingYes": "Yes, I'll be there!",
-      "attendingNo": "Regretfully decline",
-      "guestCount": "Number of Guests",
-      "message": "Message to the Couple",
-      "messagePlaceholder": "Share your wishes or any dietary requirements…",
-      "submit": "Send RSVP",
-      "submitting": "Sending…"
+      "fullName": "Полное имя",
+      "fullNamePlaceholder": "Ваше имя и фамилия",
+      "attending": "Вы придёте?",
+      "attendingYes": "Да, буду рад(а)!",
+      "attendingNo": "К сожалению, не смогу",
+      "guestCount": "Количество гостей",
+      "message": "Пожелания молодожёнам",
+      "messagePlaceholder": "Напишите пожелания или укажите пищевые предпочтения…",
+      "submit": "Отправить ответ",
+      "submitting": "Отправляем…"
     },
     "success": {
-      "title": "Thank You!",
-      "message": "We've received your RSVP and can't wait to celebrate with you."
+      "title": "Спасибо!",
+      "message": "Мы получили ваш ответ и с нетерпением ждём встречи с вами."
     },
-    "error": "Something went wrong. Please try again."
+    "error": "Что-то пошло не так. Попробуйте ещё раз."
   },
   "footer": {
-    "tagline": "Forever begins here.",
-    "copyright": "Made with love."
+    "tagline": "Здесь начинается вечность.",
+    "copyright": "Сделано с любовью."
   },
   "countdown": {
-    "days": "Days",
-    "hours": "Hours",
-    "minutes": "Minutes",
-    "seconds": "Seconds"
+    "days": "Дней",
+    "hours": "Часов",
+    "minutes": "Минут",
+    "seconds": "Секунд"
   }
 }

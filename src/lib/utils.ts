@@ -15,7 +15,7 @@ export function cn(...inputs: ClassValue[]): string {
  */
 export function formatDate(isoDate: string, options?: Intl.DateTimeFormatOptions): string {
   const date = new Date(isoDate + 'T00:00:00'); // Force local timezone
-  return date.toLocaleDateString('en-US', options ?? {
+  return date.toLocaleDateString('ru-RU', options ?? {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

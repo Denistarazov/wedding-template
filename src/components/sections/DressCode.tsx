@@ -123,24 +123,24 @@ export default function DressCode() {
             <div className="space-y-4">
               <AttireSuggestion
                 icon="👗"
-                gender="Women"
+                gender="Для неё"
                 delay={0.1}
                 items={[
-                  'Floor-length evening gown',
-                  'Formal cocktail dress',
-                  'Elegant midi dress',
-                  'Chic pantsuit or jumpsuit',
+                  'Вечернее платье в пол',
+                  'Элегантное коктейльное платье',
+                  'Платье миди в торжественном стиле',
+                  'Стильный брючный костюм или комбинезон',
                 ]}
               />
               <AttireSuggestion
                 icon="🤵"
-                gender="Men"
+                gender="Для него"
                 delay={0.2}
                 items={[
-                  'Black tuxedo or formal suit',
-                  'Dark navy or charcoal suit',
-                  'White dress shirt with tie',
-                  'Oxford shoes or dress loafers',
+                  'Чёрный смокинг или торжественный костюм',
+                  'Тёмно-синий или антрацитовый костюм',
+                  'Белая классическая рубашка с галстуком',
+                  'Оксфорды или классические лоферы',
                 ]}
               />
             </div>

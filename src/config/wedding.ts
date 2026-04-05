@@ -1,168 +1,166 @@
 /**
  * ╔══════════════════════════════════════════════════════════════╗
- * ║           WEDDING TEMPLATE — MAIN CONFIGURATION             ║
+ * ║        СВАДЕБНЫЙ ШАБЛОН — ОСНОВНАЯ КОНФИГУРАЦИЯ             ║
  * ║                                                              ║
- * ║  Edit every value here to customize the website for your    ║
- * ║  specific wedding. No other files need to be changed for    ║
- * ║  basic content updates.                                     ║
+ * ║  Редактируйте только этот файл для настройки сайта под      ║
+ * ║  конкретную свадьбу. Остальные файлы трогать не нужно.      ║
  * ╚══════════════════════════════════════════════════════════════╝
  */
 
 import type { WeddingConfig } from '@/types';
 
 export const weddingConfig: WeddingConfig = {
-  // ── Couple ────────────────────────────────────────────────────────────────
+  // ── Пара ──────────────────────────────────────────────────────────────────
   couple: {
     bride: {
-      name: 'Emma',
-      fullName: 'Emma Johnson',
-      // Replace with a local path like "/images/bride.jpg" or another URL
+      name: 'Эмма',
+      fullName: 'Эмма Джонсон',
+      // Замените на локальный путь "/images/bride.jpg" или другой URL
       photo:
         'https://images.unsplash.com/photo-1594552072238-b8a33785b6cd?w=600&q=80',
       shortBio:
-        'A passionate architect with an eye for beauty and a love for travel. Emma finds art in everything — from city skylines to quiet gardens.',
+        'Талантливый архитектор с чутьём на красоту и страстью к путешествиям. Эмма находит искусство во всём — от городских силуэтов до тихих садов.',
     },
     groom: {
-      name: 'Liam',
-      fullName: 'Liam Anderson',
+      name: 'Лиам',
+      fullName: 'Лиам Андерсон',
       photo:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
       shortBio:
-        'An adventurous photographer who captures life\'s most beautiful moments. Liam believes every frame tells a story — and their story is his favorite.',
+        'Увлечённый фотограф, умеющий поймать самые красивые мгновения жизни. Лиам убеждён, что каждый кадр рассказывает историю — и их история для него любимая.',
     },
     story: [
       {
         year: '2019',
-        title: 'First Meeting',
+        title: 'Первая встреча',
         description:
-          'We first crossed paths at a mutual friend\'s gallery opening in downtown New York. What started as a casual conversation about art turned into a three-hour walk through the city that neither of us planned.',
+          'Мы впервые встретились на открытии выставки общего друга в центре Нью-Йорка. То, что начиналось как лёгкий разговор об искусстве, переросло в трёхчасовую прогулку по городу, которую никто из нас не планировал.',
       },
       {
         year: '2020',
-        title: 'Becoming Us',
+        title: 'Мы стали «мы»',
         description:
-          'Through a year the world stood still, we found comfort in each other — long phone calls, shared playlists, and a growing certainty that we were meant to be together.',
+          'В год, когда весь мир замер, мы нашли утешение друг в друге — долгие телефонные разговоры, общие плейлисты и всё более крепкая уверенность в том, что мы созданы друг для друга.',
       },
       {
         year: '2022',
-        title: 'The Adventure Begins',
+        title: 'Начало приключений',
         description:
-          'We embarked on our first big adventure together — a road trip along the Pacific Coast Highway. Somewhere between Monterey and Big Sur, we realized we were perfectly in sync.',
+          'Мы отправились в наше первое большое совместное путешествие — road trip по тихоокеанскому побережью. Где-то между Монтереем и Биг-Суром мы поняли: мы идеально подходим друг другу.',
       },
       {
         year: '2023',
-        title: 'The Proposal',
+        title: 'Предложение',
         description:
-          'On a quiet evening in Florence, with the golden sunset casting a warm glow over the Arno River, Liam got down on one knee and asked the question that changed everything.',
+          'Тихим вечером во Флоренции, когда золотой закат освещал воды Арно, Лиам опустился на одно колено и задал вопрос, изменивший всё.',
       },
       {
         year: '2027',
-        title: 'Forever Begins',
+        title: 'Навсегда вместе',
         description:
-          'Now, surrounded by everyone we love, we say "I do" and begin our greatest adventure yet. We are so grateful you are here to share this day with us.',
+          'Теперь, в окружении всех, кого мы любим, мы говорим «да» и начинаем наше главное приключение. Мы так рады, что вы рядом с нами в этот день.',
       },
     ],
   },
 
-  // ── Event ─────────────────────────────────────────────────────────────────
+  // ── Мероприятие ───────────────────────────────────────────────────────────
   event: {
-    /** ISO format: YYYY-MM-DD — drives the countdown timer */
+    /** Формат ISO: YYYY-MM-DD — используется для таймера обратного отсчёта */
     date: '2027-06-15',
 
     ceremony: {
-      name: "St. Mary's Chapel",
-      address: '123 Rose Garden Lane, New York, NY 10001',
-      time: '4:00 PM',
+      name: 'Часовня Святой Марии',
+      address: 'ул. Розового сада, 123, Москва, 101000',
+      time: '16:00',
       description:
-        'Join us for an intimate ceremony as we exchange vows surrounded by the people we love most.',
-      // Replace this embed URL with your actual Google Maps embed URL
-      // Maps → Share → Embed → copy the src value from the iframe
+        'Приглашаем вас на камерную церемонию, где мы обменяемся клятвами в окружении самых близких людей.',
+      // Замените на настоящий URL Google Maps → Поделиться → Встроить карту
       mapUrl:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459477!3d40.74844397932797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459477!3d40.74844397932797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru',
     },
 
     reception: {
-      name: 'The Grand Ballroom',
-      address: '456 Elegant Boulevard, New York, NY 10002',
-      time: '6:30 PM',
+      name: 'Гранд Бальный Зал',
+      address: 'Элегантный бульвар, 456, Москва, 102000',
+      time: '18:30',
       description:
-        'Following the ceremony, join us for an evening of dinner, dancing, and unforgettable memories.',
+        'После церемонии присоединяйтесь к нам на вечер ужина, танцев и незабываемых воспоминаний.',
       mapUrl:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459477!3d40.74844397932797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459477!3d40.74844397932797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru',
     },
   },
 
-  // ── Dress Code ────────────────────────────────────────────────────────────
+  // ── Дресс-код ────────────────────────────────────────────────────────────
   dressCode: {
-    style: 'Black Tie Optional',
+    style: 'Торжественный (Black Tie)',
     description:
-      'We invite you to dress elegantly for our special day. Formal attire is warmly encouraged — think floor-length gowns or cocktail dresses for women, and dark suits or tuxedos for men.',
+      'Мы приглашаем вас нарядиться для нашего особенного дня. Для женщин подойдут вечерние платья в пол или элегантные коктейльные платья; для мужчин — тёмные костюмы или смокинги.',
     colors: [
-      { name: 'Blush Pink',   hex: '#F5B8C4' },
-      { name: 'Champagne',    hex: '#F5E6C8' },
-      { name: 'Dusty Rose',   hex: '#C4A0A0' },
-      { name: 'Sage Green',   hex: '#A8C5B5' },
-      { name: 'Soft Ivory',   hex: '#F8F4EC' },
-      { name: 'Soft Gold',    hex: '#D4AF37' },
+      { name: 'Пудровый розовый', hex: '#F5B8C4' },
+      { name: 'Шампань',          hex: '#F5E6C8' },
+      { name: 'Пыльная роза',     hex: '#C4A0A0' },
+      { name: 'Шалфей',           hex: '#A8C5B5' },
+      { name: 'Мягкая слоновая',  hex: '#F8F4EC' },
+      { name: 'Мягкое золото',    hex: '#D4AF37' },
     ],
     notes:
-      'Please avoid wearing white, cream, or ivory out of respect for the bride. We also ask that guests refrain from wearing black as the sole color.',
+      'Просим не приходить в белом, кремовом или цвете слоновой кости из уважения к невесте. Также просим не использовать чёрный как единственный цвет наряда.',
   },
 
-  // ── Gallery ───────────────────────────────────────────────────────────────
-  // Replace src values with your own photos (local or hosted).
-  // Set tall: true for portrait-oriented images in the masonry grid.
+  // ── Галерея ───────────────────────────────────────────────────────────────
+  // Замените src на свои фотографии (локальные или hosted).
+  // tall: true — для портретных фотографий в сетке.
   gallery: {
     images: [
       {
         id: '1',
         src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
-        alt: 'Couple portrait — golden hour',
+        alt: 'Портрет пары — золотой час',
         category: 'couple',
         tall: true,
       },
       {
         id: '2',
         src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80',
-        alt: 'Wedding ceremony aisle',
+        alt: 'Проход к алтарю',
         category: 'ceremony',
       },
       {
         id: '3',
         src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80',
-        alt: 'Reception table decor',
+        alt: 'Оформление банкетного стола',
         category: 'venue',
       },
       {
         id: '4',
         src: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80',
-        alt: 'Floral arrangements',
+        alt: 'Цветочные композиции',
         category: 'detail',
         tall: true,
       },
       {
         id: '5',
         src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80',
-        alt: 'Couple dancing',
+        alt: 'Танец молодожёнов',
         category: 'couple',
       },
       {
         id: '6',
         src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80',
-        alt: 'Wedding rings on flowers',
+        alt: 'Обручальные кольца на цветах',
         category: 'detail',
       },
       {
         id: '7',
         src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80',
-        alt: 'Venue exterior at dusk',
+        alt: 'Место проведения в сумерках',
         category: 'venue',
         tall: true,
       },
       {
         id: '8',
         src: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&q=80',
-        alt: 'Bridal party walking',
+        alt: 'Свадебная процессия',
         category: 'ceremony',
       },
     ],
@@ -170,24 +168,23 @@ export const weddingConfig: WeddingConfig = {
 
   // ── RSVP ──────────────────────────────────────────────────────────────────
   rsvp: {
-    /** RSVP deadline in ISO format */
+    /** Дедлайн подтверждения в формате ISO */
     deadline: '2027-05-01',
     maxGuestsPerRsvp: 6,
-    /** In production, wire this to an email or CRM */
+    /** В продакшне подключите к почте или CRM */
     emailTo: 'emma.liam@wedding.com',
   },
 
-  // ── Theme ─────────────────────────────────────────────────────────────────
-  // These CSS custom properties are injected into :root by globals.css
+  // ── Тема ──────────────────────────────────────────────────────────────────
   theme: {
-    primaryColor: '#C9A87C',   // Warm champagne gold — main brand color
-    accentColor:  '#8B6952',   // Deeper bronze — hover states, borders
+    primaryColor: '#C9A87C',  // Тёплое шампанское золото — основной цвет
+    accentColor:  '#8B6952',  // Глубокая бронза — состояния hover, рамки
   },
 
-  // ── SEO Meta ──────────────────────────────────────────────────────────────
+  // ── SEO мета-данные ───────────────────────────────────────────────────────
   meta: {
-    title:       "Emma & Liam's Wedding — June 15, 2027",
-    description: "Join us as we celebrate our love and begin our forever together.",
+    title:       'Свадьба Эммы и Лиама — 15 июня 2027',
+    description: 'Присоединяйтесь к нам, чтобы отметить нашу любовь и начало нашего совместного пути.',
     ogImage:
       'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80',
   },
