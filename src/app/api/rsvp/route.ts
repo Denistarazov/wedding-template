@@ -1,73 +1,60 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { rsvpStore } from '@/lib/rsvp-store';
 
 // ── Validation Schema ─────────────────────────────────────────────────────────
 const rsvpSchema = z.object({
-  fullName:   z.string().min(2, 'Name must be at least 2 characters').max(100),
-  attending:  z.enum(['yes', 'no'], { required_error: 'Please select attendance' }),
+  fullName:   z.string().min(2, 'Имя должно содержать минимум 2 символа').max(100),
+  attending:  z.enum(['yes', 'no'], { required_error: 'Укажите, придёте ли вы' }),
   guestCount: z
-    .number({ invalid_type_error: 'Guest count must be a number' })
+    .number({ invalid_type_error: 'Укажите количество гостей' })
     .int()
-    .min(1, 'At least 1 guest')
-    .max(10, 'Maximum 10 guests per RSVP'),
-  message:    z.string().max(500, 'Message too long').optional(),
+    .min(1, 'Минимум 1 гость')
+    .max(10, 'Максимум 10 гостей'),
+  message: z.string().max(500, 'Сообщение слишком длинное').optional().default(''),
 });
 
 /**
  * POST /api/rsvp
  *
- * Receives RSVP form data, validates it, and stores/forwards it.
- *
- * In production, replace the console.log with:
- *   - A database write (e.g. Prisma, Supabase, MongoDB)
- *   - An email send (e.g. Resend, SendGrid, Nodemailer)
- *   - A Google Sheets write via their API
+ * Сохраняет ответ в in-memory store (виден в /admin).
+ * В продакшне замените rsvpStore на реальную БД.
  */
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-
-    // Validate incoming data
+    const body   = await req.json();
     const result = rsvpSchema.safeParse(body);
 
     if (!result.success) {
       return NextResponse.json(
-        {
-          success: false,
-          message: 'Validation failed',
-          errors: result.error.flatten().fieldErrors,
-        },
+        { success: false, message: 'Ошибка валидации', errors: result.error.flatten().fieldErrors },
         { status: 400 },
       );
     }
 
     const data = result.data;
 
-    // ── TODO: Replace with real storage/notification logic ────────────────
-    console.log('[RSVP Received]', {
-      name:       data.fullName,
+    // Сохраняем в in-memory store
+    rsvpStore.add({
+      fullName:   data.fullName,
       attending:  data.attending,
-      guests:     data.guestCount,
+      guestCount: data.guestCount,
       message:    data.message ?? '',
-      receivedAt: new Date().toISOString(),
     });
-    // ── End TODO ───────────────────────────────────────────────────────────
 
-    // Simulate a slight processing delay (remove in production)
-    await new Promise((r) => setTimeout(r, 500));
+    console.log('[RSVP]', data.fullName, '→', data.attending, `(${data.guestCount} гост.)`);
+
+    await new Promise((r) => setTimeout(r, 300));
 
     return NextResponse.json({
       success: true,
       message:
         data.attending === 'yes'
-          ? "We're so excited to celebrate with you!"
-          : "We're sorry you can't make it, but thank you for letting us know.",
+          ? 'Ура! Мы так рады, что вы придёте!'
+          : 'Жаль, что не получится. Спасибо, что сообщили нам.',
     });
   } catch (err) {
     console.error('[RSVP Error]', err);
-    return NextResponse.json(
-      { success: false, message: 'Internal server error' },
-      { status: 500 },
-    );
+    return NextResponse.json({ success: false, message: 'Ошибка сервера' }, { status: 500 });
   }
 }
