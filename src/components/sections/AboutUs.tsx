@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
@@ -128,20 +127,6 @@ export default function AboutUs() {
           <p className="section-label mb-3">{en.about.sectionLabel}</p>
           <h2 className="section-heading">{en.about.heading}</h2>
           <div className="w-16 h-px bg-gold mx-auto mt-4" />
-        </div>
-
-        {/* ── Couple Photos ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-20 max-w-3xl mx-auto">
-          <PersonCard
-            {...couple.bride}
-            role={en.about.brideLabel}
-            delay={0}
-          />
-          <PersonCard
-            {...couple.groom}
-            role={en.about.groomLabel}
-            delay={0.15}
-          />
         </div>
 
         {/* ── Story Timeline ── */}
