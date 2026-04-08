@@ -7,58 +7,6 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import { weddingConfig } from '@/config/wedding';
 import en from '@/locales/en.json';
 
-// ── Person Card ───────────────────────────────────────────────────────────────
-
-function PersonCard({
-  name, fullName, photo, shortBio, role, delay = 0,
-}: {
-  name: string;
-  fullName: string;
-  photo: string;
-  shortBio: string;
-  role: string;
-  delay?: number;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.3 });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="flex flex-col items-center text-center group"
-    >
-      {/* Photo */}
-      <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden mb-6
-                      ring-4 ring-champagne-200 dark:ring-champagne-700
-                      group-hover:ring-gold transition-all duration-500 shadow-xl">
-        <Image
-          src={photo}
-          alt={fullName}
-          fill
-          sizes="(max-width: 768px) 200px, 256px"
-          className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
-
-      {/* Role badge */}
-      <span className="section-label mb-1">{role}</span>
-
-      {/* Name */}
-      <h3 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-3">
-        {fullName}
-      </h3>
-
-      {/* Bio */}
-      <p className="text-[var(--color-text)]/70 font-sans text-sm sm:text-base leading-relaxed max-w-xs">
-        {shortBio}
-      </p>
-    </motion.div>
-  );
-}
-
 // ── Timeline Entry ────────────────────────────────────────────────────────────
 
 function TimelineEntry({
