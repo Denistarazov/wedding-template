@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [{ key: "X-Frame-Options", value: "ALLOWALL" }],
+      },
+    ];
+  },
   // Skip ESLint during production build (run separately via `npm run lint`)
   eslint: { ignoreDuringBuilds: true },
   images: {
