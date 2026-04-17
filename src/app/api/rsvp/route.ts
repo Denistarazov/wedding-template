@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     const data = result.data;
 
     // Сохраняем в in-memory store
-    rsvpStore.add({
+    await rsvpStore.add({
       fullName:   data.fullName,
       attending:  data.attending,
       guestCount: data.guestCount,

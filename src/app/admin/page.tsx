@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { weddingConfig } from '@/config/wedding';
 import type { RSVPEntry } from '@/lib/rsvp-store';
+import type { RSVPStorageInfo } from '@/types';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface Stats {
@@ -120,6 +121,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
 function Dashboard({ onLogout }: { onLogout: () => void }) {
   const [rsvps,   setRsvps]   = useState<RSVPEntry[]>([]);
   const [stats,   setStats]   = useState<Stats | null>(null);
+  const [storage, setStorage] = useState<RSVPStorageInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [error,   setError]   = useState('');
   const [search,  setSearch]  = useState('');
@@ -134,6 +136,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
       if (json.success) {
         setRsvps(json.data.rsvps);
         setStats(json.data.stats);
+        setStorage(json.data.storage ?? null);
       }
     } catch {
       setError('Не удалось загрузить данные');
@@ -316,11 +319,13 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           )}
         </div>
 
-        {/* Warning about in-memory storage */}
-        <p className="text-center text-xs text-[var(--color-text)]/30 mt-6">
-          ⚠️ Данные хранятся в памяти сервера — сбрасываются при перезапуске.{' '}
-          Подключите Supabase или Vercel KV для постоянного хранения.
-        </p>
+        {storage && (
+          <p className="text-center text-xs text-[var(--color-text)]/30 mt-6">
+            {storage.persistent
+              ? `Данные сохраняются через ${storage.label}.`
+              : `⚠️ Данные хранятся через ${storage.label} и могут сброситься после перезапуска.`}
+          </p>
+        )}
 
       </main>
     </div>

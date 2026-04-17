@@ -62,17 +62,16 @@ function VenueCard({
                  hover:shadow-lg transition-shadow duration-300"
     >
       {/* Card Header */}
-      <div className="bg-[var(--color-primary)] px-6 py-4">
-        <span className="text-xs tracking-[0.2em] uppercase font-sans font-medium text-white/80">
-          {type}
-        </span>
-        <h3 className="font-serif text-2xl font-bold text-white mt-0.5">
+      <div className="h-1 w-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]" />
+      <div className="px-6 py-5">
+        <span className="section-label">{type}</span>
+        <h3 className="font-serif text-2xl font-bold text-[var(--color-text)] mt-1">
           {venue.name}
         </h3>
       </div>
 
       {/* Card Body */}
-      <div className="p-6">
+      <div className="px-6 pb-6">
         <p className="text-[var(--color-text)]/70 font-sans text-sm leading-relaxed mb-5">
           {venue.description}
         </p>

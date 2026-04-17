@@ -18,6 +18,7 @@ A modern, production-ready **wedding website template** built with Next.js and a
 - 🎭 **Tailwind CSS** — utility-first styling with custom design tokens
 - 📋 **Contact Form** — built with React Hook Form + Zod validation
 - 🌙 **Theme Support** — light/dark mode via next-themes
+- 🗂 **Admin RSVP panel** — protected dashboard for guest responses
 - 🚀 **Deploy-ready** — configured for Vercel
 
 ---
@@ -33,6 +34,7 @@ A modern, production-ready **wedding website template** built with Next.js and a
 | Forms | React Hook Form + Zod |
 | Language | TypeScript 5 |
 | Deploy | Vercel |
+| RSVP Storage | Vercel Blob or local JSON fallback |
 
 ---
 
@@ -76,6 +78,12 @@ npm start
 ```
 
 Deploy instantly on [Vercel](https://vercel.com) — zero config needed.
+
+### RSVP persistence
+
+- For local development, RSVPs are stored in `data/rsvps.json`.
+- For Vercel production, set `BLOB_READ_WRITE_TOKEN` to persist RSVPs in Vercel Blob.
+- If no persistent storage is configured in production, the app falls back to in-memory storage.
 
 ---
 

@@ -128,3 +128,9 @@ export interface RSVPApiResponse {
   success: boolean;
   message: string;
 }
+
+export interface RSVPStorageInfo {
+  mode: 'blob' | 'file' | 'memory';
+  label: string;
+  persistent: boolean;
+}

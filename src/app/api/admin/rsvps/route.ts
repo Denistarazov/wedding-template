@@ -12,8 +12,9 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({
     success: true,
     data: {
-      rsvps:  rsvpStore.getAll(),
-      stats:  rsvpStore.getStats(),
+      rsvps: await rsvpStore.getAll(),
+      stats: await rsvpStore.getStats(),
+      storage: rsvpStore.getStorageInfo(),
     },
   });
 }

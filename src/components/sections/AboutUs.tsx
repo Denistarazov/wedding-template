@@ -3,9 +3,47 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import Image from 'next/image';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import { weddingConfig } from '@/config/wedding';
 import en from '@/locales/en.json';
+import type { PersonInfo } from '@/types';
+
+// ── Portrait Card ─────────────────────────────────────────────────────────────
+
+function PortraitCard({ person, delay = 0 }: { person: PersonInfo; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      className="flex gap-5 items-start p-6 rounded-2xl
+                 bg-champagne-50 dark:bg-champagne-900/20
+                 border border-champagne-200 dark:border-champagne-700/30"
+    >
+      <div className="relative w-20 h-20 flex-shrink-0 rounded-full overflow-hidden
+                      ring-2 ring-[var(--color-primary)]/40">
+        <Image
+          src={person.photo}
+          alt={person.name}
+          fill
+          sizes="80px"
+          className="object-cover"
+        />
+      </div>
+      <div>
+        <h4 className="font-serif text-xl font-bold text-[var(--color-text)]">{person.name}</h4>
+        <p className="text-sm text-[var(--color-text)]/60 font-sans leading-relaxed mt-1.5">
+          {person.shortBio}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
 
 // ── Timeline Entry ────────────────────────────────────────────────────────────
 
@@ -75,6 +113,12 @@ export default function AboutUs() {
           <p className="section-label mb-3">{en.about.sectionLabel}</p>
           <h2 className="section-heading">{en.about.heading}</h2>
           <div className="w-16 h-px bg-gold mx-auto mt-4" />
+        </div>
+
+        {/* ── Portrait Cards ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-16 max-w-3xl mx-auto">
+          <PortraitCard person={couple.bride} delay={0} />
+          <PortraitCard person={couple.groom} delay={0.12} />
         </div>
 
         {/* ── Story Timeline ── */}
